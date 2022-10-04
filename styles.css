@@ -1,0 +1,148 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 50px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
+    color: #4d4e53;
+}
+
+a:not(.reference-link) {
+    text-decoration: none;
+}
+
+#navbar {
+    background: #ebf1ec;
+    position: sticky;
+    top: -145px;
+    z-index: 2;
+    text-align: center;
+}
+
+header {
+    font-size: 28.8px;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: thin;
+}
+
+#navbar header {
+    font-size: 26px;
+    padding: 30px 20px 0 30px;
+}
+
+.list-items {
+    height: 20vh;
+    overflow-y : scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-items li {
+    list-style: none;
+    border-bottom: 1px solid green;
+    padding: 8px;
+    display: block;
+    width: 100%;
+}
+
+.nav-link {
+    color: #4a4747;
+    text-align: center;
+    display: block;
+    width: fit-content;
+    padding: 0 16px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nav-link::before {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: green;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width .3s;
+}
+.nav-link:hover::before {
+    width: 100%;
+}
+
+/* end of nav-bar */
+
+#main-doc {
+    padding: 60px 20px;
+}
+
+.main-section {
+    margin-left: 10px;
+}
+
+.main-section article {
+    font-size: 15.35px;
+    color: #4d4e53;
+    margin: 15px;
+}
+
+.main-section p,
+.main-section li {
+    margin-bottom: 16px;
+}
+
+.main-section ul {
+    margin-left: 32px;
+}
+
+code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    word-break: normal;
+    word-wrap: normal;
+    overflow-wrap: break-word;
+    line-height: 2;
+    background-color: #e6f9e9;
+    padding: 15px;
+    margin-left: -15px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    min-width: 300px;
+  }
+
+@media(min-width: 600px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-column-gap: 30px;
+    }
+
+    #main-doc {
+        padding: 30px 0;
+    }
+
+    #navbar {
+        height: 100vh;
+        top: 0;
+    }
+
+    .list-items {
+        height: 80%;
+        padding-bottom: 30px;
+    }
+}
+
+
